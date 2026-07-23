@@ -13,9 +13,9 @@ Desenvolvido por **Riolly Mikael**.
 <p align="center">
   <b>Plataforma web imobiliária de alto padrão desenvolvida com foco em sofisticação, experiência do usuário e design responsivo.</b>
 </p>
-
+<a href="https://riollymikael.github.io/imobiliaria-premium-landing-page/">
 <p align="center">
-  <a href="https://riollymikael.github.io/imobiliaria-premium-landing-page/">
+
   <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge">
   <img src="https://img.shields.io/badge/HTML5-E54C21?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
