@@ -1,4 +1,14 @@
+## 👨‍💻 Autor
+
+Desenvolvido por **Riolly Mikael**.
+
+* **GitHub:** [@riollymikael](https://github.com/riollymikael)
+
 # 🏛️ Luxe Haven Real Estate
+
+<p align="center">
+  <img src="images/preview.png" alt="Preview do Projeto Luxe Haven" width="100%" style="border-radius: 8px;">
+</p>
 
 <p align="center">
   <b>Plataforma web imobiliária de alto padrão desenvolvida com foco em sofisticação, experiência do usuário e design responsivo.</b>
