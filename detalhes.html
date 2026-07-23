@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel | Luxe Haven</title>
+    
+    <link rel="stylesheet" href="imobiliaria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilo inline de segurança para forçar o empilhamento perfeito no celular -->
+    <style>
+        .detalhes-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .detalhes-wrapper {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            .detalhes-img-box img {
+                height: 300px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">LUXE HAVEN <span>REAL ESTATE</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">← Voltar ao Início</a></li>
+            </ul>
+        </nav>
+        <a href="index.html#contato" class="btn-primary">Falar com Corretor</a>
+    </header>
+
+    <!-- SEÇÃO DE DETALHES DO IMÓVEL -->
+    <main class="container" style="margin-top: 120px; margin-bottom: 60px;">
+        <div class="detalhes-wrapper">
+            
+            <!-- COLUNA ESQUERDA: FOTO GRANDE -->
+            <div class="detalhes-img-box" style="position: relative;">
+                <img id="detalheImg" src="" alt="Foto do Imóvel" style="width: 100%; height: 450px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-color);">
+                <span id="detalhePreco" class="price-tag" style="font-size: 1.2rem; padding: 10px 20px;"></span>
+            </div>
+
+            <!-- COLUNA DIREITA: INFORMAÇÕES E DESCRIÇÃO -->
+            <div class="detalhes-info-box" style="background: var(--card-bg); padding: 35px; border-radius: 8px; border: 1px solid var(--border-color);">
+                <h1 id="detalheTitulo" style="font-size: 2.2rem; color: var(--text-light); margin-bottom: 10px;"></h1>
+                <p id="detalheLocal" style="color: var(--text-gray); font-size: 1.1rem; margin-bottom: 25px;"><i class="fa-solid fa-location-dot" style="color: var(--gold);"></i> <span></span></p>
+                
+                <div class="features-grid" style="margin-bottom: 25px;">
+                    <span><i class="fa-solid fa-bed"></i> <strong id="detalheQuartos"></strong></span>
+                    <span><i class="fa-solid fa-bath"></i> <strong id="detalheBanheiros"></strong></span>
+                    <span><i class="fa-solid fa-car"></i> <strong id="detalheGaragem"></strong></span>
+                    <span><i class="fa-solid fa-ruler-combined"></i> <strong id="detalheArea"></strong></span>
+                </div>
+
+                <div class="modal-desc-box" style="background-color: var(--dark-bg); padding: 20px; border-radius: 8px; border-left: 4px solid var(--gold); margin-bottom: 30px;">
+                    <h3 style="color: var(--text-light); margin-bottom: 10px; font-size: 1.1rem;">Descrição Completa</h3>
+                    <p id="detalheDescricao" style="color: var(--text-gray); line-height: 1.8;"></p>
+                </div>
+
+                <button class="btn-submit" onclick="agendarVisita()" style="width: 100%;">Agendar Visita com Corretor Private</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>LUXE HAVEN</h3>
+                <p>Especialistas em negócios imobiliários de alto padrão e inteligência patrimonial.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#imoveis">Imóveis</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luxe Haven Real Estate. Todos os direitos reservados. Desenvolvido por <strong>Riolly</strong>.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const imoveisData = {
+            "1": {
+                titulo: "Mansão Contemporânea",
+                preco: "R$ 8.500.000",
+                local: "Alphaville, Barueri - SP",
+                quartos: "5 Quarto(s)",
+                banheiros: "6 Banheiro(s)",
+                garagem: "6 Vagas",
+                area: "750 m²",
+                imagem: "images/imovel-1.jpg",
+                descricao: "Mansão de altíssimo padrão com projeto arquitetônico premiado. Possui automação residencial total, piscina aquecida com borda infinita, espaço gourmet integrado, adega climatizada e acabamentos importados."
+            },
+            "2": {
+                titulo: "Cobertura Vista Mar",
+                preco: "R$ 12.000.000",
+                local: "Jardins, São Paulo - SP",
+                quartos: "4 Quarto(s)",
+                banheiros: "5 Banheiro(s)",
+                garagem: "4 Vagas",
+                area: "520 m²",
+                imagem: "images/imovel-2.jpg",
+                descricao: "Exclusiva cobertura duplex totalmente mobiliada por designers renomados. Possui rooftop privativo com spa, sistema de som integrado em todos os ambientes e vista panorâmica impecável."
+            },
+            "3": {
+                titulo: "Residência Minimalista",
+                preco: "R$ 6.200.000",
+                local: "Quinta da Baroneza - SP",
+                quartos: "4 Quarto(s)",
+                banheiros: "5 Banheiro(s)",
+                garagem: "4 Vagas",
+                area: "480 m²",
+                imagem: "images/imovel-3.jpg",
+                descricao: "Projeto biofílico integrado à natureza preservada do condomínio. Casa térrea com pé direito duplo, esquadrias do chão ao teto, energia solar e paisagismo exclusivo."
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const idImovel = urlParams.get('id');
+
+        if (idImovel && imoveisData[idImovel]) {
+            const imovel = imoveisData[idImovel];
+            document.getElementById('detalheTitulo').innerText = imovel.titulo;
+            document.getElementById('detalhePreco').innerText = imovel.preco;
+            document.getElementById('detalheLocal').querySelector('span').innerText = imovel.local;
+            document.getElementById('detalheQuartos').innerText = imovel.quartos;
+            document.getElementById('detalheBanheiros').innerText = imovel.banheiros;
+            document.getElementById('detalheGaragem').innerText = imovel.garagem;
+            document.getElementById('detalheArea').innerText = imovel.area;
+            document.getElementById('detalheImg').src = imovel.imagem;
+            document.getElementById('detalheDescricao').innerText = imovel.descricao;
+        } else {
+            document.querySelector('main').innerHTML = "<div class='container' style='text-align:center; padding: 80px 0;'><h2>Imóvel não encontrado.</h2><br><a href='index.html' class='btn-primary'>Voltar ao Início</a></div>";
+        }
+
+        function agendarVisita() {
+            alert("Solicitação enviada com sucesso! Um corretor private entrará em contato em instantes.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Haven | Imóveis de Alto Padrão</title>
+    
+    <!-- Link para o seu CSS SEPARADO -->
+    <link rel="stylesheet" href="imobiliaria.css">
+    
+    <!-- Font Awesome para Ícones Imobiliários -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">LUXE HAVEN <span>REAL ESTATE</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#imoveis">Destaques</a></li>
+                <li><a href="#sobre">A Imobiliária</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+            </ul>
+        </nav>
+        <a href="#contato" class="btn-primary">Falar com Corretor</a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">EXCLUSIVIDADE & REQUINTE</span>
+            <h1>Encontre o imóvel dos seus sonhos com padrão internacional</h1>
+            <p>Residências exclusivas, coberturas de luxo e condomínios fechados nas localizações mais nobres.</p>
+            
+            <div class="search-box">
+                <div class="input-group">
+                    <label>Localização</label>
+                    <input type="text" placeholder="Ex: Jardins, Alphaville...">
+                </div>
+                <div class="input-group">
+                    <label>Tipo de Imóvel</label>
+                    <select>
+                        <option>Casa em Condomínio</option>
+                        <option>Cobertura Duplex</option>
+                        <option>Apartamento Luxo</option>
+                    </select>
+                </div>
+                <button class="btn-search">Buscar Imóvel</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMOVEIS EM DESTAQUE (Cards com ícones) -->
+    <section id="imoveis" class="container">
+        <div class="section-header">
+            <h2>Portfólio Exclusivo</h2>
+            <p>Clique em um imóvel para ver a descrição completa e especificações na página de detalhes.</p>
+        </div>
+
+        <div class="cards-grid">
+            <!-- CARD 1 -->
+            <div class="card-imovel" data-imovel="1">
+                <div class="card-img">
+                    <img src="images/imovel-1.jpg" alt="Mansão Contemporânea">
+                    <span class="price-tag">R$ 8.500.000</span>
+                </div>
+                <div class="card-info">
+                    <h3>Mansão Contemporânea</h3>
+                    <p class="location"><i class="fa-solid fa-location-dot"></i> Alphaville, Barueri - SP</p>
+                    
+                    <!-- Ícones que aparecem no card inicial -->
+                    <div class="features-grid">
+                        <span><i class="fa-solid fa-bed"></i> 5 Quarto(s)</span>
+                        <span><i class="fa-solid fa-bath"></i> 6 Banheiro(s)</span>
+                        <span><i class="fa-solid fa-car"></i> 6 Vagas</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 750 m²</span>
+                    </div>
+
+                    <a href="detalhes.html?id=1" class="btn-card" style="display: block; text-align: center;">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card-imovel" data-imovel="2">
+                <div class="card-img">
+                    <img src="images/imovel-2.jpg" alt="Cobertura Vista Mar">
+                    <span class="price-tag">R$ 12.000.000</span>
+                </div>
+                <div class="card-info">
+                    <h3>Cobertura Vista Mar</h3>
+                    <p class="location"><i class="fa-solid fa-location-dot"></i> Jardins, São Paulo - SP</p>
+                    
+                    <!-- Ícones que aparecem no card inicial -->
+                    <div class="features-grid">
+                        <span><i class="fa-solid fa-bed"></i> 4 Quarto(s)</span>
+                        <span><i class="fa-solid fa-bath"></i> 5 Banheiro(s)</span>
+                        <span><i class="fa-solid fa-car"></i> 4 Vagas</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 520 m²</span>
+                    </div>
+
+                    <a href="detalhes.html?id=2" class="btn-card" style="display: block; text-align: center;">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card-imovel" data-imovel="3">
+                <div class="card-img">
+                    <img src="images/imovel-3.jpg" alt="Residência Minimalista">
+                    <span class="price-tag">R$ 6.200.000</span>
+                </div>
+                <div class="card-info">
+                    <h3>Residência Minimalista</h3>
+                    <p class="location"><i class="fa-solid fa-location-dot"></i> Quinta da Baroneza - SP</p>
+                    
+                    <!-- Ícones que aparecem no card inicial -->
+                    <div class="features-grid">
+                        <span><i class="fa-solid fa-bed"></i> 4 Quarto(s)</span>
+                        <span><i class="fa-solid fa-bath"></i> 5 Banheiro(s)</span>
+                        <span><i class="fa-solid fa-car"></i> 4 Vagas</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 480 m²</span>
+                    </div>
+
+                    <a href="detalhes.html?id=3" class="btn-card" style="display: block; text-align: center;">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE A IMOBILIÁRIA -->
+    <section id="sobre" class="sobre-section">
+        <div class="container sobre-grid">
+            <div class="sobre-img">
+                <img src="images/corretor.jpg" alt="Corretor de Imóveis">
+            </div>
+            <div class="sobre-texto">
+                <h2>Atendimento Consultivo e Alta Discreção</h2>
+                <p>Há mais de 15 anos liderando o mercado imobiliário de alto padrão. Oferecemos uma assessoria jurídica e patrimonial completa para garantir negociações seguras, ágeis e transparentes.</p>
+                
+                <div class="stats">
+                    <div>
+                        <h3>+500</h3>
+                        <p>Imóveis Vendidos</p>
+                    </div>
+                    <div>
+                        <h3>R$ 2B+</h3>
+                        <p>Em Vendas VVG</p>
+                    </div>
+                    <div>
+                        <h3>100%</h3>
+                        <p>Satisfação dos Clientes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="container">
+        <div class="section-header">
+            <h2>O Que Dizem Nossos Clientes</h2>
+            <p>Experiências de quem encontrou a residência ideal conosco</p>
+        </div>
+        <div class="depoimentos-grid">
+            <div class="depoimento-card">
+                <p>"A discrição e o profissionalismo da equipe da Luxe Haven foram fundamentais na compra da nossa cobertura nos Jardins. Processo impecável!"</p>
+                <h4>— Roberto Silveira</h4>
+                <span>Investidor & Empresário</span>
+            </div>
+            <div class="depoimento-card">
+                <p>"Encontrar uma casa que atendesse todas as necessidades da minha família em Alphaville parecia impossível até conhecermos a consultoria private deles."</p>
+                <h4>— Dra. Mariana Alencar</h4>
+                <span>Médica Cirurgiã</span>
+            </div>
+            <div class="depoimento-card">
+                <p>"Atendimento de nível internacional. A apresentação dos imóveis e o suporte jurídico nos transmitiram total segurança do início ao fim."</p>
+                <h4>— Carlos & Beatriz Mendes</h4>
+                <span>Proprietários na Baroneza</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato-section">
+        <div class="container contato-box">
+            <h2>Solicite um Atendimento Exclusivo</h2>
+            <p>Preencha os dados abaixo e um dos nossos Private Brokers entrará em contato em minutos.</p>
+
+            <form class="contato-form" id="formContato">
+                <input type="text" placeholder="Seu Nome Completo" required>
+                <input type="email" placeholder="Seu Melhor E-mail" required>
+                <input type="tel" placeholder="Telefone / WhatsApp" required>
+                <select>
+                    <option>Interesse: Comprar Imóvel</option>
+                    <option>Interesse: Vender Meu Imóvel</option>
+                    <option>Interesse: Investimentos</option>
+                </select>
+                <button type="submit" class="btn-submit">Falar com Especialista</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>LUXE HAVEN</h3>
+                <p>Especialistas em negócios imobiliários de alto padrão e inteligência patrimonial.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#imoveis">Imóveis</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luxe Haven Real Estate. Todos os direitos reservados. Desenvolvido por <strong>Riolly</strong>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
